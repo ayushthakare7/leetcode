@@ -4,7 +4,7 @@ class Solution:
         rows, cols = len(image), len(image[0])
         original = image[sr][sc]
 
-        # If the color is already the same, nothing to do
+        
         if original == color:
             return image
 
