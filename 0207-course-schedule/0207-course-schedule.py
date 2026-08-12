@@ -4,8 +4,8 @@ class Solution:
         indegrees = [ 0 for _ in range(numCourses)]
 
         for u,v in prerequisites:
-            adj_list[u].append(v)
-            indegrees[v] +=1
+            adj_list[v].append(u)
+            indegrees[u] +=1
 
         queue = deque()
         result = []
