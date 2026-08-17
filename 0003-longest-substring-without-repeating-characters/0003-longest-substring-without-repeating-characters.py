@@ -11,8 +11,9 @@ class Solution:
 
             dict[s[right]] = right
 
-            right = right + 1
+            
 
-            maxi = max(maxi, right - left)
+            maxi = max(maxi, right - left + 1)
+            right = right + 1
 
         return maxi
