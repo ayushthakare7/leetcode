@@ -5,13 +5,10 @@ class Solution:
         maxi = 0
 
         for j in range(len(nums)):
-            if nums[j] == 0:
-                zeros += 1
+            zeros += nums[j] == 0
 
-            # CHANGED: shrink window while zeros > k
             while zeros > k:
-                if nums[i] == 0:
-                    zeros -= 1
+                zeros -= nums[i] == 0
                 i += 1
 
             maxi = max(maxi, j - i + 1)
